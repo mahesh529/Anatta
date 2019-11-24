@@ -1,9 +1,17 @@
-<img  *ngIf="product"  [src]="product.image.url" />
-<section id="images-container" *ngIf="productImages && productImages.length>0">
-        <i class="material-icons" [ngClass]="{'disabled':activeImgIndex===0}" (click)="changeImage(activeImgIndex-1)">keyboard_arrow_left</i>
-        <img (click)="changeImage(i)" [ngClass]="{'active':i==activeImgIndex}" (click)="activeImgIndex=i;" *ngFor="let image of productImages;let i=index;" [src]='image.url' />
-        <i class="material-icons"  [ngClass]="{'disabled':activeImgIndex>=productImages.length-1}" (click)="changeImage(activeImgIndex+1)">keyboard_arrow_right</i>
-</section>
-<i class="material-icons"  *ngIf="productImages && productImages.length>0" [ngClass]="{'disabled':activeImgIndex===0}" (click)="changeImage(activeImgIndex-1)">keyboard_arrow_left</i>
-<i class="material-icons"  *ngIf="productImages && productImages.length>0" [ngClass]="{'disabled':activeImgIndex>=productImages.length-1}" (click)="changeImage(activeImgIndex+1)">keyboard_arrow_right</i>
+<div id='main-image-cont'>
+  <img *ngIf="product" [src]="product.image.url" />
+  <i class="material-icons" *ngIf="productImages && productImages.length>0" [ngClass]="{'disabled':activeImgIndex===0}"
+    (click)="changeImage(activeImgIndex-1)">keyboard_arrow_left</i>
+  <i class="material-icons" *ngIf="productImages && productImages.length>0"
+    [ngClass]="{'disabled':activeImgIndex>=productImages.length-1}"
+    (click)="changeImage(activeImgIndex+1)">keyboard_arrow_right</i>
 
+</div>
+<section id="images-container" *ngIf="productImages && productImages.length>0">
+  <i class="material-icons" [ngClass]="{'disabled':activeImgIndex===0}"
+    (click)="changeImage(activeImgIndex-1)">keyboard_arrow_left</i>
+  <img (click)="changeImage(i)" [ngClass]="{'active':i==activeImgIndex}" (click)="activeImgIndex=i;"
+    *ngFor="let image of productImages;let i=index;" [src]='image.url' />
+  <i class="material-icons" [ngClass]="{'disabled':activeImgIndex>=productImages.length-1}"
+    (click)="changeImage(activeImgIndex+1)">keyboard_arrow_right</i>
+</section>
