@@ -1,0 +1,94 @@
+@import '../../../variables';
+header{
+    letter-spacing: 2px;
+    border-bottom: 1px solid #F1F1F1;
+    #top-title{
+        text-align: center;
+        background: $color-dark;
+        color:$color-light;
+        font-size: 10px;
+        padding: 10px 0;
+    }
+    .flex{
+        justify-content:space-between;
+        height: 70px;
+        line-height: 70px;
+        #left-menu{
+            display: none;
+        }
+        #about{
+            display: none;
+        }
+        #logo{
+            width: 59px;
+            height: 35px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            +nav{
+                margin-right: 10px;
+            }
+        }
+        .icon:last-of-type{
+            margin-left: 15px;
+        }
+        .icon{
+            height: 23px;
+            width: 23px;
+            vertical-align: middle;
+        }
+        #menu{
+            margin-left: 20px;
+            font-size: 18px;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+        #cart-count{
+           padding: 5px;
+           background: $color-green;
+           color:$color-light;
+           position: relative;
+            border-radius: 50%;
+            font-size: 10px;
+            top: -10px;
+            left: -5px;
+        }
+    }
+  
+}
+@media only screen and (min-width: 768px) {/* For Desktops */
+    header{
+        .flex{
+            height: 89px;
+            line-height: 89px;
+            #left-menu{
+                display: inline;
+                margin-left: 50px;
+                a:first-of-type{
+                    margin-right: 40px;
+                }
+            }
+            #about{
+                display: inline;
+            }
+            #logo{
+                width: 75px;
+                height: 45px;
+            }
+            .icon:last-of-type{
+                margin-left: 20px;
+            }
+            .icon:first-of-type{
+                margin-left: 45px;
+            }
+            .icon{
+                width: 26px;
+                height: 26px;
+            }
+            #menu{
+                display: none;
+            }
+        }  
+    }
+}

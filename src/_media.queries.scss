@@ -1,0 +1,14 @@
+@media only screen and (min-width: 768px) {/* For Desktops */
+    app-header{
+        .icon{
+            width: 26px;
+            height: 26px;
+        }
+    }
+    .container{
+        max-width: 1440px;
+        padding: 0 73px;
+        margin: auto;
+        width: 100%;
+    }
+}

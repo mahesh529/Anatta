@@ -1,0 +1,61 @@
+<section id='filter'>
+  <header>
+    <div id='filterTop'>
+      <i class="material-icons">keyboard_arrow_left</i>
+      MEN
+    </div>
+    <div id="product-details"  *ngIf="product"  class="flex">
+            <div>
+              <div class="big-font">{{product.name}}</div>
+              <div class="mid-font">OCA LOW</div>
+            </div>
+            <div>
+              <div class="extra-big">${{product.price}} USD</div>
+              <div class="star">
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star_border</i>
+                <span class="mid-font">154 Reviews</span>
+              </div>
+            </div>
+        </div>
+        
+  </header>
+  <section id='filter-main'>
+    <div class="flex">
+      <a [ngClass]="{'active':activeGender=='men'}" (click)="activeGender='men'" class="big-font">MEN</a>
+      <a [ngClass]="{'active':activeGender!='men'}" (click)="activeGender='women'" class="big-font">WOMEN</a>
+    </div>
+    <div>
+      <div>
+        <div class="mid-font">SELECT COLOR</div>
+        <div>
+          <span *ngFor="let colorArr of colors;let i=index;">
+            <a class="color" (click)="activeColorIndex=i;" [ngClass]="{'active':i==activeColorIndex}" *ngIf="colorArr.length===1" [ngStyle]="{'background-color': colorArr[0],'color': colorArr[0]}"></a>
+            <a class="color double" (click)="activeColorIndex=i;" [ngClass]="{'active':i==activeColorIndex}"  *ngIf="colorArr.length>1">
+              <i [ngStyle]="{'background-color': colorArr[0],'color': colorArr[0]}"></i>
+              <i [ngStyle]="{'background-color': colorArr[1],'color': colorArr[1]}"></i>
+            </a>
+          </span>
+        </div>
+      </div>
+      <div id='size-filter'>
+        <div class="flex">
+          <span class="mid-font">SELECT SIZE</span>
+          <a>Size & Fit Guide</a>
+        </div>
+        <div>
+          <a class="size" (click)="activeSizeIndex=i;" [ngClass]="{'active':activeSizeIndex===i}" *ngFor="let size of sizes;let i=index">
+            {{size}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <button class="big-font">ADD TO BAG</button>
+  <footer>
+    Worldwide Shipping + Free Returns
+  </footer>
+</section>

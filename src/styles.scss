@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+/*Mobile first approach*/
+@import './variables';
+@import './media.queries';
+body{
+    font-family: HCo Gotham,arial,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 12px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    color: $color-dark;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+a{
+    cursor: pointer;
+    color:$color-dark;
+    outline: none;
+    font-weight: 600;
+}
+a, a:hover {
+    text-decoration: none;
+}
+.material-icons{
+    vertical-align: bottom;
+}
+.color-green{
+    color:$color-green;
+}
+.color-light{
+    color:$color-light;
+}
+.color-normal{
+    color:$color-normal;
+}
+.big-font{
+    font-size: 16px;
+    color: black;
+}
+.mid-font{
+    font-size: 14px;
+    color: #3e3e3e;
+}
+.extra-big{
+    font-size: 18px;
+    color: #3e3e3e;
+}
+*{
+    box-sizing: border-box;
+}
+.flex{
+    display: flex;
+}
+.relative{
+    position: relative;
+}

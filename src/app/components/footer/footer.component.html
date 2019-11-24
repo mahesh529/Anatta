@@ -1,0 +1,79 @@
+<section id='footer-top'>
+  <section class="container flex">
+      <div>
+          <i class="material-icons">lock</i>
+          <span>Secure Payment</span>
+        </div>
+        <div>
+          <i class="material-icons" id='flight-icon'>flight</i>
+          <span>Express Shipping</span>
+        </div>
+        <div>
+          <i class="material-icons">card_giftcard</i>
+          <span>Free Returns</span>
+        </div>
+</section>
+</section>
+<section id='footer-bottom'>
+  <section id='news-letter'>
+
+  </section>
+  <section class="container" id='sub-nav-desk'>
+    <ul class="full-ul" *ngFor='let links of footerLinks;let i=index;'>
+      <li *ngFor='let link of links;let j=index;'>
+        <a>{{link}}</a>
+        <div class="flex" id='italic' *ngIf='i===footerLinks.length-2 && j===links.length-1'>
+            <input  placeholder="Find your sneakers here"/>
+            <i class="search-materail material-icons">search</i>
+        </div>
+        <div  *ngIf="i===footerLinks.length-1 && j===links.length-1">
+            <div class="flex">
+                <input placeholder="Enter email"/>
+                <button >JOIN US</button>
+            </div>  
+            <div id='social'>
+              <img src="../../../assets/icons/instagram.png"/>
+              <img src="../../../assets/icons/Facebook__x28_alt_x29_.png"/>
+            </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="flex" id='sub-nav-mobile'>
+    <div>
+      <ul *ngFor='let links of footerMobileLinks'>
+        <li *ngFor='let link of links'>
+          <a>{{link}}</a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li>
+          <a>ABOUT</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a>BLOG</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a>POP UP STORES</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section  class="container">
+    <div  id='copy-right'>
+        <div>
+            Copyright © 2019 CARIUMA. All Rights Reserved. 
+        </div>
+        <div>
+            <a>Terms of Use</a>
+            <a>Privacy Policy</a>
+        </div> 
+    </div>   
+  </section>
+</section>

@@ -1,0 +1,46 @@
+<div id='sug-text'>You'll Also Like</div>
+
+
+<!-- <div class="content-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="auto">
+        <div *ngIf="type == 'directive' && show" class="swiper-container" [disabled]="disabled" [swiper]="config" >
+          <div class="swiper-wrapper">
+                <div *ngFor="let product of products"  class="swiper-slide">
+                        <img [src]="product.image.url" (click)="changeProduct(product)" />
+                        <div class="big-font">{{product.name}}</div>
+                        <div class="mid-font">${{product.price}}</div>
+                        <div class="product-label">{{product.label}}</div>
+                </div>
+          </div>
+
+          <div class="swiper-scrollbar" [hidden]="config.scrollbar === false"></div>
+          <div class="swiper-pagination" [hidden]="config.pagination === false"></div>
+
+          <div class="swiper-button-prev" [hidden]="config.navigation === false">prev</div>
+          <div class="swiper-button-next" [hidden]="config.navigation === false">next</div>
+        </div>
+</div>
+  -->
+<section id='reco-container' class="container">
+  <div class="swiper-container" id='swiper-desk' *ngIf='show' [swiper]="config">
+    <div class="swiper-wrapper">
+
+      <div *ngFor="let product of products" class="swiper-slide">
+        <img [src]="product.image.url" (load)='loadImage()' (click)="changeProduct(product)" />
+        <div class="big-font">{{product.name}}</div>
+        <div class="mid-font">${{product.price}}</div>
+        <div class="product-label">{{product.label}}</div>
+      </div>
+
+    </div>
+
+    <div class="swiper-scrollbar"></div>
+    <div class="swiper-pagination"></div>
+
+  </div>
+  <div class="swiper-button-prev">
+    <i class="material-icons">keyboard_arrow_left</i>
+  </div>
+  <div class="swiper-button-next">
+    <i class="material-icons">keyboard_arrow_right</i>
+  </div>
+</section>
