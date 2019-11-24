@@ -10,7 +10,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ProductRecommandationsComponent } from './components/product-recommandations/product-recommandations.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
 import { ProductFiltersComponent } from './components/product-filters/product-filters.component';
 
 
@@ -22,7 +21,6 @@ import { ProductFiltersComponent } from './components/product-filters/product-fi
     FooterComponent,
     ProductDetailComponent,
     ProductRecommandationsComponent,
-    CarouselComponent,
     ProductFiltersComponent
   ],
   imports: [
